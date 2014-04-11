@@ -78,8 +78,6 @@ BOARD_CAMERA_USE_MM_HEAP := true
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Audio
-TARGET_QCOM_MEDIA_VARIANT := caf
-BOARD_HAVE_SAMSUNG_AUDIO := true
 BOARD_QCOM_VOIP_ENABLED := true
 BOARD_QCOM_TUNNEL_LPA_ENABLED := true
 
@@ -97,36 +95,4 @@ TARGET_DISPLAY_USE_RETIRE_FENCE := true
 
 # Use CM PowerHAL
 TARGET_USES_CM_POWERHAL := true
-
-# Recovery
-BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/msm8660-common/recovery/graphics.c
-
-# SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/samsung/msm8660-common/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    app.te \
-    bluetooth.te \
-    device.te \
-    domain.te \
-    drmserver.te \
-    file_contexts \
-    files \
-    file.te \
-    hci_init.te \
-    healthd.te \
-    init.te \
-    init_shell.te \
-    keystore.te \
-    kickstart.te \
-    mediaserver.te \
-    rild.te \
-    surfaceflinger.te \
-    system.te \
-    ueventd.te \
-    untrusted_app.te \
-    vold.te \
-    wpa.te \
-    wpa_socket.te
 
